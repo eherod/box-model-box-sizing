@@ -77,14 +77,19 @@ Let's put some content in our paragraph tag and have another look (keep in mind 
 <p>Now you see a red box stretching across the screen</p>
 ```
 
+To see what this looks like in the browser follow this link:
+https://silly-bell-afcd45.netlify.app/
+
+
+You see that we now have our paragraph element displaying content and that content has a red background. I mentioned above that the content is the main determining factor in how your element is displayed on the screen, but it is not the only factor. You might expect that our red background would wrap tightly to the content in the paragraph tag and not extend beyond the last letter of the word "screen". However, we need to also consider how html handles elements. Elements in HTML are either displayed as block, inline, or inline-block. To remain within the scope of this article I will only touch briefly on this. 
+
+Many of the common structural tags we use in HTML such as div, paragraph, header, and footer tags are by default block elements. A block element is assigned a block of space that stretches the width of its parent container. In our example above, the parent container of our paragraph element is the body element, which happens to also match the width of our viewport. So our paragraph element, being an html block element, stretches the width of the body element, and thus across the width of our viewport. 
+
+Notice that the height of the red background barely stretches beyond the height of our content (Remember that the red color is distinct from and not to be confused as being a part of the content. Our content is what is placed between the opening and closing paragraph tags). The content is determining the height of the output we see on our screen. The content is typicaly manipulated using CSS properties like font-size, font-wieght, letter-spacing, color, ect.
 
 
 
-The content is typicaly manipulated using CSS properties like font-size, font-wieght, letter-spacing, color, ect.
 
 
-
-
-
-(* 1) By default, the browser will have set margins and paddings on various elements so your first task when setting up your stylesheet is to turn these defaults off so that you have full control over the design of your page.  
+<sup>* </sup> By default, the browser will have set margins and paddings on various elements so your first task when setting up your stylesheet is to turn these defaults off so that you have full control over the design of your page.  
 

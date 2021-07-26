@@ -48,7 +48,11 @@ Likewise,
 
 "Nothing I say is true" is the content inside of the paragraph element.
 
-Before any styles are added to your page, the content will be the main determining factor in how your element is displayed.<sup>*</sup> What do I mean by this? 
+Before any styles are added to your page, the content will be the main determining factor in how your element is displayed.
+
+<sup>*By default, the browser will have set margins and paddings on various elements so your first task when setting up your stylesheet is to turn these defaults off so that you have full control over the design of your page.</sup>
+
+ What do I mean by this? 
 
 Consider the following: 
 
@@ -85,11 +89,36 @@ You see that we now have our paragraph element displaying content and that conte
 
 Many of the common structural tags we use in HTML such as div, paragraph, header, and footer tags are by default block elements. A block element is assigned a block of space that stretches the width of its parent container. In our example above, the parent container of our paragraph element is the body element, which happens to also match the width of our viewport. So our paragraph element, being an html block element, stretches the width of the body element, and thus across the width of our viewport. 
 
-Notice that the height of the red background barely stretches beyond the height of our content (Remember that the red color is distinct from and not to be confused as being a part of the content. Our content is what is placed between the opening and closing paragraph tags). The content is determining the height of the output we see on our screen. The content is typicaly manipulated using CSS properties like font-size, font-wieght, letter-spacing, color, ect.
+Notice that the height of the red background barely stretches beyond the height of our content (Remember that the red color is distinct from and not to be confused as being a part of the content. Our content is what is placed between the opening and closing paragraph tags). The content is determining the height of the output we see on our screen. The content is typicaly manipulated using CSS properties like font-size, font-wieght, letter-spacing, color, ect.If you were to change the font-size of our paragraph element, the red background would grow or shrink in proportion to the newly assigned font-size. For design purposes, it is probably a good idea to have your font-family and font-size set up early on in the process of laying out your site because of the way changes to content can effect the other box model properties that we will soon discuss.
+
+***
+
+<center><h2>Padding</h2</center>
+
+***
+
+So far we have been discussing the core of our box model, that is, our element's content. Surrounding our content is padding. At the beginning of this article I mentioned that the space that can be manipulated by padding is bounded by a border. So, to understand how your element will respond when you add padding, remember that the padding will either expand or contract the space immediately surrounding your content, but it will not go beyond the element's border. In fact, when you apply padding to an element you are in effect pushing the element's border further away from the element's content. The space bewteen the content and the border is controlled with the padding property.
+
+Let's return to our example paragraph element that we used in content section above.
+
+```
+<p>Now you see a red box stretching across the screen</p>
+```
+
+I am going to add 100px of padding to the left side of the paragraph element using the padding-left property: 
+
+```
+.content-example{
+    background: red; 
+    padding-left: 100px; 
+}
+```
 
 
 
 
 
-<sup>* </sup> By default, the browser will have set margins and paddings on various elements so your first task when setting up your stylesheet is to turn these defaults off so that you have full control over the design of your page.  
+
+
+ 
 
